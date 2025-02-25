@@ -8,7 +8,7 @@ export const resources = {
         contact: 'Contact',
       },
       hero: {
-        title: 'Automating Your Success',
+        title: 'What is your challenge?',
         subtitle: 'Transform your business with intelligent automation solutions that solve real problems',
         cta: 'Get Started',
       },
@@ -46,7 +46,7 @@ export const resources = {
         contact: 'Contato',
       },
       hero: {
-        title: 'Automatizando Seu Sucesso',
+        title: 'Qual é seu desafio?',
         subtitle: 'Transforme seu negócio com soluções inteligentes de automação que resolvem problemas reais',
         cta: 'Começar',
       },
