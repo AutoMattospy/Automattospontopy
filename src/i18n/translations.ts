@@ -9,7 +9,6 @@ export const resources = {
       },
       hero: {
         title: 'What is your challenge?',
-        subtitle: 'Transform your business with intelligent automation solutions that solve real problems',
         cta: 'Get Started',
       },
       features: {
