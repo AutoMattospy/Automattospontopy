@@ -12,7 +12,8 @@ export const Hero: React.FC = () => {
     'Erros operacionais impactando a qualidade do seu serviço?',
     'Dificuldade para escalar operações sem aumentar custos?',
     'Informações importantes perdidas em planilhas e sistemas?',
-    'Demora para gerar relatórios e análises gerenciais?'
+    'Demora para gerar relatórios e análises gerenciais?',
+    'Precisa de um site profissional e moderno para sua empresa?'
   ];
 
   return (
@@ -68,4 +69,4 @@ export const Hero: React.FC = () => {
       </motion.div>
     </div>
   );
-};
+}
