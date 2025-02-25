@@ -51,4 +51,28 @@ export const resources = {
         cta: 'Começar',
       },
       features: {
+        title: 'Transforme Desafios em Oportunidades',
+        subtitle: 'Identificamos e resolvemos as principais dores das empresas através de soluções de automação inteligente',
+      },
+      contact: {
+        title: 'Entre em Contato',
+        info: {
+          title: 'Informações de Contato',
+        },
+        form: {
+          name: 'Nome',
+          email: 'Email',
+          message: 'Mensagem',
+          submit: 'Enviar Mensagem',
+        },
+      },
+      footer: {
+        description: 'Transformando negócios através de soluções inteligentes de automação',
+        solutions: 'Soluções',
+        company: 'Empresa',
+        social: 'Social',
+        rights: 'Todos os direitos reservados.',
+      },
+    },
+  },
 };
