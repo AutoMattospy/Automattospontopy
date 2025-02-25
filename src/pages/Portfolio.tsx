@@ -2,13 +2,36 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Footer } from '../components/Footer';
-import { Filter, Code, FileSpreadsheet, Database, LineChart, Globe } from 'lucide-react';
+import { Filter, Code, FileSpreadsheet, Database, LineChart, Globe, Layout } from 'lucide-react';
 
 export const Portfolio: React.FC = () => {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<string>('all');
 
   const projects = [
+    // Website Development Projects
+    {
+      title: 'E-commerce Moderno',
+      description: 'Desenvolvimento de plataforma e-commerce completa com design responsivo, integração de pagamentos e gestão de produtos.',
+      category: 'website',
+      tags: ['React', 'Next.js', 'Tailwind CSS', 'Stripe'],
+      image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80',
+    },
+    {
+      title: 'Site Institucional Premium',
+      description: 'Website corporativo com design elegante, animações suaves e otimização para mecanismos de busca (SEO).',
+      category: 'website',
+      tags: ['React', 'TypeScript', 'Framer Motion', 'SEO'],
+      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80',
+    },
+    {
+      title: 'Portal de Conteúdo',
+      description: 'Sistema de blog e gestão de conteúdo com painel administrativo personalizado e integração com redes sociais.',
+      category: 'website',
+      tags: ['React', 'Node.js', 'CMS', 'Social Media'],
+      image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80',
+    },
+
     // Python Automation Projects
     {
       title: 'Automação de Relatórios Financeiros',
@@ -74,8 +97,9 @@ export const Portfolio: React.FC = () => {
 
   const categories = [
     { id: 'all', name: 'Todos', icon: Filter },
+    { id: 'website', name: 'Sites', icon: Layout },
     { id: 'python', name: 'Python', icon: Code },
-    { id: 'web', name: 'Web', icon: Globe },
+    { id: 'web', name: 'Web Apps', icon: Globe },
     { id: 'powerbi', name: 'Power BI', icon: LineChart },
   ];
 
