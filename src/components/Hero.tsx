@@ -44,4 +44,31 @@ export const Hero: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="flex items-start space-x-3 text-gray-300"
+              >
+                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <span className="text-lg">{challenge}</span>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            className="text-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center space-x-2 bg-primary text-secondary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-dark transition-colors"
+            >
+              <span>Conheça nossas soluções</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
+  );
 };
