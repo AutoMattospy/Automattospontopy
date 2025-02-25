@@ -1,62 +1,42 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Code, Database, LineChart } from 'lucide-react';
+import { Clock, TrendingDown, FileSearch, Users, Database, LineChart } from 'lucide-react';
 
 export const Features: React.FC = () => {
   const { t } = useTranslation();
   
-  const features = [
+  const painPoints = [
     {
-      icon: <Code className="w-12 h-12 text-primary" />,
-      title: t('features.automation.title', 'Process Automation'),
-      description: t('features.automation.description', 'Streamline your workflows with custom automation solutions'),
+      icon: <Clock className="w-12 h-12 text-primary" />,
+      title: 'Processos Manuais Demorados',
+      description: 'Funcionários gastando horas em tarefas repetitivas como entrada de dados, geração de relatórios e processamento de documentos.',
+      impact: 'Perda de 30% do tempo produtivo e alto risco de erros humanos',
+      solution: 'Automatização completa de processos repetitivos, liberando sua equipe para atividades estratégicas'
+    },
+    {
+      icon: <TrendingDown className="w-12 h-12 text-primary" />,
+      title: 'Ineficiência Operacional',
+      description: 'Processos desconectados, múltiplos sistemas não integrados e falta de padronização nas operações.',
+      impact: 'Atrasos, inconsistências e custos operacionais 40% maiores que o necessário',
+      solution: 'Integração de sistemas e padronização de processos com automação inteligente'
+    },
+    {
+      icon: <FileSearch className="w-12 h-12 text-primary" />,
+      title: 'Dificuldade com Relatórios',
+      description: 'Tempo excessivo para coletar, processar e analisar dados de diferentes fontes para tomada de decisão.',
+      impact: 'Decisões atrasadas e baseadas em dados desatualizados',
+      solution: 'Relatórios automatizados em tempo real com insights acionáveis'
+    },
+    {
+      icon: <Users className="w-12 h-12 text-primary" />,
+      title: 'Sobrecarga da Equipe',
+      description: 'Funcionários sobrecarregados com tarefas operacionais, levando à desmotivação e erros.',
+      impact: 'Alta rotatividade e custos com retrabalho',
+      solution: 'Automação das tarefas repetitivas, permitindo foco em atividades estratégicas'
     },
     {
       icon: <Database className="w-12 h-12 text-primary" />,
-      title: t('features.data.title', 'Data Integration'),
-      description: t('features.data.description', 'Seamlessly connect and manage your data across platforms'),
-    },
-    {
-      icon: <LineChart className="w-12 h-12 text-primary" />,
-      title: t('features.analytics.title', 'Business Analytics'),
-      description: t('features.analytics.description', 'Transform data into actionable insights'),
-    },
-  ];
-
-  return (
-    <section className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold text-primary mb-4">
-            {t('features.title', 'Our Solutions')}
-          </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            {t('features.subtitle', 'Discover how our automation solutions can transform your business')}
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-secondary p-8 rounded-lg hover:shadow-lg transition-shadow"
-            >
-              <div className="mb-6">{feature.icon}</div>
-              <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+      title: 'Gestão de Dados Complexa',
+      description: 'Dificuldade em manter dados atualizados e consistentes entre diferentes sistemas e departamentos.',
 };
